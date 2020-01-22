@@ -10,6 +10,7 @@
 
     .mzp-c-field + &,
     .mzp-c-form-group + &,
+    .mzp-c-form-row + &,
     .mzp-c-choice + &,
     .mzp-c-choices + & {
         margin-top: $field-v-spacing * -1 + $label-v-spacing;

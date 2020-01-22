@@ -57,12 +57,12 @@
 }
 
 /* -------------------------------------------------------------------------- */
-// flexable width, grid conforms to the fields
 
 .mzp-l-form-group-datetime,
-.mzp-l-form-group-expiry,
-.mzp-l-form-group-row {
+.mzp-l-form-group-expiry {
     grid-template-columns: repeat(1, 1fr);
+    width: auto;
+    max-width: max-content;
 
     > .mzp-c-field > .mzp-c-form-msg,
     > .mzp-c-field-control {
@@ -84,9 +84,41 @@
     }
 }
 
-@media #{$mq-sm} {
-    .mzp-l-form-group-row {
-        grid-template-columns: repeat(4, min-content);
-    }
+/* -------------------------------------------------------------------------- */
+// flexable width, grid conforms to the fields
+
+.mzp-c-form-row {
+    display: flex;
+    clear: left;
+    column-gap: $field-h-spacing;
+    flex-wrap: wrap;
 }
 
+.mzp-c-form-row .mzp-c-form-set {
+    flex: min-content;
+}
+
+.mzp-c-form-row .mzp-c-field {
+    flex: 1 auto;
+}
+
+.mzp-c-form-row .mzp-c-button {
+    flex: 1 1;
+}
+
+.mzp-c-form-row > .mzp-c-field > .mzp-c-field-control {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* -------------------------------------------------------------------------- */
+// flexable width, grid conforms to the fields
+
+
+
+
+@media #{$mq-sm} {
+    // .mzp-c-form-row {
+    //     grid-template-columns: repeat(4, min-content);
+    // }
+}

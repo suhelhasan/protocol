@@ -6,10 +6,12 @@ title: Billing
   <form class="mzp-c-form">
     <h2 class="mzp-c-form-heading">Billing information</h2>
     <p class="mzp-c-form-intro">Find out what hackers already know about you. Learn how to stay a step ahead of them.</p>
-    {{#embed "patterns.molecules.forms.fields.input" id="name" type="text" }}
-      {{#content "label"}}Name as it appears on your card{{/content}}
-    {{/embed}}
-    <div class="mzp-c-form-group mzp-l-form-group-row">
+    <div class="mzp-c-form-row">
+      {{#embed "patterns.molecules.forms.fields.input" id="name" type="text" }}
+        {{#content "label"}}Name as it appears on your card{{/content}}
+      {{/embed}}
+    </div>
+    <div class="mzp-c-form-row">
       {{#embed "patterns.molecules.forms.fields.input" id="br1" type="text"}}
         {{#content "label"}}Card Number{{/content}}
         {{#content "attrs"}}maxlength="19" size="19"{{/content}}
@@ -45,10 +47,10 @@ title: Billing
         {{#content "attrs"}}maxlength="5" size="5"{{/content}}
       {{/embed}}
     </div>
-    <div class="mzp-c-form-group mzp-l-form-group-row">
+    <div class="mzp-c-form-row">
       {{#embed "patterns.molecules.forms.fields.input" id="city" type="text"}}
         {{#content "label"}}City{{/content}}
-        {{#content "attrs"}}size="30"{{/content}}
+        {{#content "attrs"}}size="15"{{/content}}
       {{/embed}}
       {{#embed "patterns.molecules.forms.fields.select" id="state"}}
         {{#content "label"}}State{{/content}}
@@ -63,12 +65,13 @@ title: Billing
     </div>
 
     <div class="mzp-c-form-buttons">
-      <div class="mzp-c-form-group mzp-l-form-group-half">
+      <div class="mzp-c-form-row">
         <button type="submit" class="mzp-c-button mzp-t-secondary mzp-t-product mzp-t-small">Cancel</button>
         <button type="submit" class="mzp-c-button mzp-t-primary mzp-t-product mzp-t-small">Submit</button>
-        <p class="mzp-c-form-info mzp-t-small">
-          Mozilla uses Strip for secure payment processing.<br>
-          View the <a href="#">Stripe privacy policy</a>.
-        </p>
+      </div>
+      <p class="mzp-c-form-info mzp-t-small">
+        Mozilla uses Strip for secure payment processing.<br>
+        View the <a href="#">Stripe privacy policy</a>.
+      </p>
   </form>
 </div>

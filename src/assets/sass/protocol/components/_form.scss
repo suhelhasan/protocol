@@ -92,7 +92,8 @@ legend.mzp-c-form-label {
         padding-bottom: $field-v-spacing;
     }
 
-    .mzp-c-form-group + & {
+    .mzp-c-form-group + &,
+    .mzp-c-form-row + & {
         margin-top: ($field-v-spacing * -1) + $spacing-sm; // TODO: verrify
     }
 
@@ -116,7 +117,7 @@ legend.mzp-c-form-label {
     }
 }
 
-.mzp-c-field-control.mzp-l-full {
+.mzp-c-field-control.mzp-l-full { // TODO: is this staying
     width: 100%;
 }
 
@@ -126,12 +127,6 @@ legend.mzp-c-form-label {
 
 .mzp-c-form-footer {
     padding-top: calc(#{$spacing-sm} + #{$line-height-shim});
-
-    &.mzp-l-full {
-        display: grid;
-        column-gap: $field-h-spacing;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
 }
 
 .mzp-c-form-buttons {
@@ -140,7 +135,8 @@ legend.mzp-c-form-label {
         margin-left: $field-h-spacing;
     }
 
-    .mzp-c-form-group + & {
+    .mzp-c-form-group + &,
+    .mzp-c-form-row + & {
         margin-top: $spacing-xl - $field-v-spacing;
     }
 }
