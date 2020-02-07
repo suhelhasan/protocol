@@ -1,0 +1,68 @@
+---
+title: Choices
+---
+
+
+<form class="mzp-c-form">
+  <fieldset class="mzp-c-form-set">
+    <legend class="mzp-c-form-label">Choices (in this case checkboxes)</legend>
+    <div class="mzp-c-choices">
+      {{#embed "patterns.molecules.forms.fields.choice" id="s-check-1" type="checkbox"}}{{#content "label"}}Option 1{{/content}}{{/embed}}
+      {{#embed "patterns.molecules.forms.fields.choice" id="s-check-2" type="checkbox"}}{{#content "label"}}Option 2{{/content}}{{/embed}}
+    </div>
+    <p class="mzp-c-form-info">With more information about these choices.</p>
+  </fieldset>
+  <fieldset class="mzp-c-form-set">
+    <legend class="mzp-c-form-label">Inline Choices (in this case checkboxes)</legend>
+    <div class="mzp-c-choices mzp-l-choices-inline">
+      {{#embed "patterns.molecules.forms.fields.choice" id="si-check-1" type="checkbox"}}{{#content "label"}}Option 1{{/content}}{{/embed}}
+      {{#embed "patterns.molecules.forms.fields.choice" id="si-check-2" type="checkbox"}}{{#content "label"}}Option 2{{/content}}{{/embed}}
+    </div>
+    <p class="mzp-c-form-info">With more information about these choices.</p>
+  </fieldset>
+
+  <fieldset class="mzp-c-form-set">
+    <legend class="mzp-c-form-label">Choices (in this case radio button) <span class="mzp-c-fieldnote">With a fieldnote.</span></legend>
+    <div class="mzp-c-choices">
+      {{#embed "patterns.molecules.forms.fields.choice" id="f5" type="radio" name="g1"}}{{#content "label"}}Option 1{{/content}}{{/embed}}
+      {{#embed "patterns.molecules.forms.fields.choice" id="f6" type="radio" name="g1"}}
+        {{#content "label"}}
+          Option 2 <span class="mzp-c-fieldnote">With a fieldnote.</span>
+        {{/content}}
+      {{/embed}}
+    </div>
+    <p class="mzp-c-form-info">With more information about these choices.</p>
+  </fieldset>
+
+  <fieldset class="mzp-c-form-set">
+    <legend class="mzp-c-form-label">Inline Choices (in this case radio buttons)</legend>
+    <div class="mzp-c-choices mzp-l-choices-inline">
+      {{#embed "patterns.molecules.forms.fields.choice" id="sic-1" type="radio" name="sic"}}{{#content "label"}}Option 1{{/content}}{{/embed}}
+      {{#embed "patterns.molecules.forms.fields.choice" id="sic-2" type="radio" name="sic"}}{{#content "label"}}Option 2{{/content}}{{/embed}}
+      {{#embed "patterns.molecules.forms.fields.choice" id="sic-3" type="radio" name="sic"}}{{#content "label"}}Option 3{{/content}}{{/embed}}
+      {{#embed "patterns.molecules.forms.fields.choice" id="sic-4" type="radio" name="sic"}}{{#content "label"}}Obnoxiously long input option that is intended to push this to a new line{{/content}}{{/embed}}
+      {{#embed "patterns.molecules.forms.fields.choice" id="sic-5" type="radio" name="sic"}}{{#content "label"}}Option 5{{/content}}{{/embed}}
+    </div>
+    <p class="mzp-c-form-info">With more information about these choices.</p>
+  </fieldset>
+
+  {{#embed "patterns.molecules.forms.fields.choice" id="s-terms" type="checkbox"}}{{#content "label"}}Single checkbox <span class="mzp-c-fieldnote">With a fieldnote</span>{{/content}}{{/embed}}
+
+  {{#embed "patterns.molecules.forms.fields.choice" id="s-terms1" type="checkbox" info="true"}}{{#content "label"}}Single checkbox{{/content}}{{#content "info"}}With more information about this choice.{{/content}}{{/embed}}
+
+  {{#embed "patterns.molecules.forms.fields.choice" id="s-terms2" type="checkbox" is-legal="true"}}{{#content "label"}}Single checkbox with less prominent label{{/content}}{{/embed}}
+
+
+  <p>TODO: move errors to form error page</p>
+  <fieldset class="mzp-c-form-set">
+    <legend class="mzp-c-form-label">Check boxes <span class="mzp-c-fieldnote">With a fieldnote.</span></legend>
+    <div class="mzp-c-choices">
+      {{#embed "patterns.molecules.forms.fields.choice" id="scn-1" type="checkbox"}}{{#content "label"}}Option 1{{/content}}{{/embed}}
+      {{#embed "patterns.molecules.forms.fields.choice" id="scn-2" type="checkbox"}}{{#content "label"}}Option 2{{/content}}{{/embed}}
+    </div>
+    <div class="mzp-c-form-msg">Msg</div>
+    <p class="mzp-c-form-info">With more information about these choices.</p>
+  </fieldset>
+
+  {{#embed "patterns.molecules.forms.fields.choice" id="s-terms3" type="checkbox" is-legal="true" msg="You must agree to our privacy notice to continue."}}{{#content "label"}}I’m okay with Mozilla handling my info as explained in <a href="/en-US/privacy/websites/">this Privacy Notice</a>{{/content}}{{/embed}}
+</form>
